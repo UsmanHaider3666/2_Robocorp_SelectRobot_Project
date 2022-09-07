@@ -27,8 +27,8 @@ class SelectRobot:
         self.http.download(url="https://robotsparebinindustries.com/orders.csv", overwrite=True)
 
     def convert_to_excel(self):
-        self.readfile = pd.read_csv("/home/usman/Python-RPA/RobocorpProject2/orders.csv")
-        self.readfile.to_excel("/home/usman/Python-RPA/RobocorpProject2/orders.xlsx")
+        self.readfile = pd.read_csv("/home/usman/Python-RPA/2_Robocorp_Select_Robot_Project/orders.csv")
+        self.readfile.to_excel("/home/usman/Python-RPA/2_Robocorp_Select_Robot_Project/orders.xlsx")
 
     def build_and_order_your_robot(self):
         self.excel.open_workbook("orders.xlsx")
@@ -62,7 +62,7 @@ class SelectRobot:
                     break
 
     def make_zip(self):
-        self.zip.archive_folder_with_zip("/home/usman/Python-RPA/RobocorpProject2/output", "orders.zip", True, )
+        self.zip.archive_folder_with_zip("/home/usman/Python-RPA/2_Robocorp_Select_Robot_Project/output", "orders.zip", True, )
 
 
 if __name__ == '__main__':
